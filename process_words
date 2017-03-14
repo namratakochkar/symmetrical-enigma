@@ -1,0 +1,22 @@
+"""
+Collects a list of strings from the user and manipulates a little.
+"""
+
+def CollectWords():
+    """return a list of words provided by the user."""
+    word_list = []
+    while True:
+        word = raw_input("Give me a word: (enter to quit:)")
+        if not word:
+            return word_list
+        word_list.append(word)
+
+def CollectAndJoinWords():
+    """Collects words and join them into one big string
+    seperated by 'and'.
+    """
+    word_list =  CollectWords()
+    glued_words = " and ". join(word_list)
+    return glued_words
+
+CollectAndJoinWords()

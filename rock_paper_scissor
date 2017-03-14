@@ -1,0 +1,28 @@
+"""rock, paper, scissor """
+
+import random
+
+options = ["rock, paper, scissors"]
+
+while True:
+    player = str(raw_input("Enter your choice: "))
+    comp = random.choice(options)
+
+    print "You have entered", player
+    if player == "rock" and comp == "scissors":
+        print "Congrats! you won!"
+        break
+    elif player == "paper" and comp == "rock":
+        print "Congrats! you won!"
+        break
+    elif player == "scissors" and comp == "paper":
+        print "Congrats! you won!"
+        break
+    elif player == comp:
+        print "Draw!! Try Again!!"
+    else:
+        print "Loser!!!"
+        
+    
+    
+    

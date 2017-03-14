@@ -1,0 +1,12 @@
+"""prime number"""
+
+
+x = int(raw_input('Your number:\n'))
+
+for i in range(2, int(x/2)+2):
+    if x % i == 0:
+        print('Your number is a composite number')
+        break
+    else:
+        print('Your number is a prime number')
+    break

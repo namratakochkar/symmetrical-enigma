@@ -1,0 +1,27 @@
+"""
+Collects a list of numbers, and sorts them.
+"""
+
+def CollectNumbers():
+    """Returns a list of numbers, provided by the user."""
+    number_list = []
+    while True:
+        number = raw_input("Number please: (enter to quit): ")
+        if not number:
+            break
+        try:
+            number = float(number)
+        except ValueError:
+            print number, "is not a number."
+            continue
+        number_list.append(number)
+    return number_list
+
+def ProcessNumber():
+    """Collects and Sort Numbers"""
+    number_list = CollectNumbers()
+    number_list.sort()
+    print "Your numbers sorted:", number_list
+
+
+ProcessNumber()

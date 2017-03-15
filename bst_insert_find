@@ -1,0 +1,61 @@
+class Node:
+    def __init__(self, val):
+        self.value = val
+        self.LeftChild = None
+        self.RightChild = None
+
+    def insert(self,data):
+        if self.value == data: #no duplication
+            return False
+
+        elif self.data > data:
+            if self.LeftChild:
+                return self.LeftChild.insert(data)
+            else:
+                self.LeftChild = Node(data) #create a Node
+                return False
+        else:
+            if self.RightChild:
+                return self.RightChild.insert(data)
+            else:
+                self.RightChild = Node(data)
+
+    def find(self,data):
+        if self.value == data:
+            return True
+        elif self.value > data:
+            if self.LeftChild:
+                return self.LeftChild.find(data)
+            else:
+                return False
+        else:
+            if self.RightChild:
+                return self.RightChild.find(data)
+            else:
+                return False
+                
+            
+class Tree:
+    def __init__(self):
+        self.root = None
+
+    def insert(self,data):
+        if self.root:
+            return self.root.insert(data)
+        else:
+            return False
+
+    def find(data):
+        if self.root:
+            return self.root.find(data)
+        else:
+            return False
+
+
+
+
+bst = Tree()
+print(bst.insert(10))
+
+
+

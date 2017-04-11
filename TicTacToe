@@ -59,8 +59,8 @@ def game_over():
 
     # check win by column
     for i in range(3):
-        if len(set(gameboard[i])) == 1:
-        #if gameboard[0][i] == gameboard[1][i] == gameboard[2][i]:
+        #if len(set(gameboard[i])) == 1:
+        if gameboard[0][i] == gameboard[1][i] == gameboard[2][i]:
             if gameboard[0][i] == '.':
                 continue
             elif gameboard[0][i] == 'X':
